@@ -1,2 +1,1 @@
-# core
-Core redux package
+NoPoMo Core Package
