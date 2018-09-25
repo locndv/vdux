@@ -79,5 +79,9 @@
     "moduleDirectories": [
       "node_modules"
     ]
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "tag": "latest"
   }
 }
