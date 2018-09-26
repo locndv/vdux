@@ -79,6 +79,7 @@
     "moduleDirectories": [
       "node_modules"
     ],
+    "coverageDirectory": "../coverage",
     "coveragePathIgnorePatterns": [
       "/node_modules/",
       "/test/",
