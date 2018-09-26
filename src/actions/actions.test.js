@@ -1,6 +1,5 @@
 import * as R from 'ramda';
 import * as ActionTypes from '.';
-import { Action } from 'rxjs/internal/scheduler/Action';
 
 const TYPES = [ActionTypes.SUCCESS, ActionTypes.FAILURE, ActionTypes.REQUEST];
 const ENTITIES = [
