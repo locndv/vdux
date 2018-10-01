@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { navigate, resetErrorMessage, loadIPFSConfig } from "./core/actions";
-import logo from "./logo.svg";
-import "./App.css";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { navigate, resetErrorMessage, loadIPFSConfig } from '@nopomo/core';
+import logo from './logo.svg';
+import './App.css';
 
-import TopicsPage from "./containers/topics";
+import TopicsPage from './containers/topics';
 
 class App extends Component {
   componentWillMount() {
-    this.props.loadIPFSConfig("QmPHK9NYBPMbpNgkey6QVjBe6E2bFX1BN1SzgfqcexKrcX");
+    this.props.loadIPFSConfig('QmPHK9NYBPMbpNgkey6QVjBe6E2bFX1BN1SzgfqcexKrcX');
   }
 
   render() {
