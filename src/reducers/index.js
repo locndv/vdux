@@ -1,23 +1,7 @@
 import { combineReducers } from 'redux';
 import * as ActionTypes from '../actions';
 import ipfsReducer from './ipfs';
-
-const initialState = {
-  topics: {},
-  items: {}
-};
-
-const entities = (state = initialState, action) => {
-  switch (action.type) {
-    case ActionTypes.TOPICS.SUCCESS:
-      return {
-        ...state,
-        topics: action.response
-      };
-    default:
-      return state;
-  }
-};
+import entitiesReducer from './entities';
 
 const errorMessage = (state = null, action) => {
   const { type } = action;
@@ -37,7 +21,7 @@ const router = (state = { pathname: '/' }, action) => {
 };
 
 const rootReducer = combineReducers({
-  entities,
+  entities: entitiesReducer,
   ipfs: ipfsReducer,
   errorMessage,
   router
