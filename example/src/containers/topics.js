@@ -1,39 +1,39 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react';
 
-import {connect} from 'react-redux'
-import {loadTopicPage} from '../core/actions'
+import { connect } from 'react-redux';
+import { loadTopicPage } from '@nopomo/core';
 
 class TopicsPage extends Component {
   componentWillMount() {
-    this._load()
+    this._load();
   }
 
   _load() {
-    const hash = 'QmPhxT9nZALsqWsn14AgkBichHQHXU73SAQx5FP8F6RfT9'
-    const url = 'topic/list/02-khoa-hoc-va-niem-tin'
-    this.props.loadTopicPage(hash, url)
+    const hash = 'QmPhxT9nZALsqWsn14AgkBichHQHXU73SAQx5FP8F6RfT9';
+    const url = 'topic/list/02-khoa-hoc-va-niem-tin';
+    this.props.loadTopicPage(hash, url);
   }
 
   render() {
-    return <div>Hello</div>
+    return <div>Hello</div>;
   }
 }
 
 const mapStateToProps = state => {
   const {
-    entities: {topics},
-    ipfs,
-  } = state
+    entities: { topics },
+    ipfs
+  } = state;
 
   return {
     topics,
-    ipfs,
-  }
-}
+    ipfs
+  };
+};
 
-const mapDispatchToProps = {loadTopicPage}
+const mapDispatchToProps = { loadTopicPage };
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps,
-)(TopicsPage)
+  mapDispatchToProps
+)(TopicsPage);
