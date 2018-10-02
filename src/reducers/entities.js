@@ -40,7 +40,7 @@ const entitiesReducer = (state = initialState, action) => {
       })(state);
     case ActionTypes.ITEMS.SUCCESS:
       return R.evolve({
-        items: assignItem(payload),
+        item: assignItem(payload),
         itemsCache: addToCache(payload)
       })(state);
     default:
