@@ -20,14 +20,16 @@ describe('reducers/entities', () => {
     const reCacheState = entitiesReducer(newState, action);
     expect(reCacheState).toEqual(newState);
   });
-  it('put item payload to store and cache', () => {
-    const response = await fetch('https://ipfs.io/ipfs/QmZyng1tJ863rJTNervc5XL8SYBHjRSRM3pwHnpG4KY821/topics/list/home.video.json');
+  it('put item payload to store and cache', async () => {
+    const response = await fetch(
+      'https://ipfs.io/ipfs/QmZyng1tJ863rJTNervc5XL8SYBHjRSRM3pwHnpG4KY821/items/list/thieu-nhi.bai-hat.json'
+    );
     const data = await response.json();
-    const action = ActionTypes.items.success('01-sermons.pastors.god-free-us';
+    const action = ActionTypes.items.success('01-sermons.pastors.god-free-us', data);
     const newState = entitiesReducer(undefined, action);
     expect(newState.item).toEqual(data);
     expect(newState.itemsCache[data.url]).toEqual(data);
     const reCacheState = entitiesReducer(newState, action);
     expect(reCacheState).toEqual(newState);
-  })
+  });
 });
