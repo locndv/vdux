@@ -14,6 +14,12 @@ export const assignTopic = jsonData => () => ({
   ...jsonData
 });
 
+export const assignItem = jsonData => () => ({
+  id: jsonData.id,
+  list: jsonData.list,
+  ...jsonData
+});
+
 export const addToCache = jsonData => cache => {
   if (!R.prop(jsonData.url, cache)) {
     return {
@@ -31,6 +37,11 @@ const entitiesReducer = (state = initialState, action) => {
       return R.evolve({
         topic: assignTopic(payload),
         topicsCache: addToCache(payload)
+      })(state);
+    case ActionTypes.ITEMS.SUCCESS:
+      return R.evolve({
+        items: assignItem(payload),
+        itemsCache: addToCache(payload)
       })(state);
     default:
       return state;
