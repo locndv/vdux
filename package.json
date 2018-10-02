@@ -1,6 +1,6 @@
 {
   "name": "@nopomo/core",
-  "version": "0.0.0-development",
+  "version": "1.0.2",
   "description": "Yet another library.",
   "license": "MIT",
   "main": "lib/index.js",
