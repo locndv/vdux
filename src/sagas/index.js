@@ -32,8 +32,8 @@ function* loadIPFSConfig(ipns) {
 
 function* watchLoadIPFSConfig() {
   while (true) {
-    const { ipns } = yield take(ActionTypes.LOAD_IPFS_CONFIG);
-    yield fork(loadIPFSConfig, ipns);
+    const action = yield take(ActionTypes.LOAD_IPFS_CONFIG);
+    yield fork(loadIPFSConfig, action.payload.ipns);
   }
 }
 
@@ -46,7 +46,9 @@ function* watchNavigate() {
 
 function* watchLoadTopicPage() {
   while (true) {
-    const { hash, topicUrl } = yield take(ActionTypes.LOAD_TOPIC_PAGE);
+    const {
+      payload: { hash, topicUrl }
+    } = yield take(ActionTypes.LOAD_TOPIC_PAGE);
     yield fork(loadTopics, hash, topicUrl);
   }
 }

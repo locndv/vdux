@@ -1,4 +1,3 @@
-import { fromJS } from 'immutable';
 import { applyMiddleware, compose, createStore } from 'redux';
 import createSagaMiddleware, { END } from 'redux-saga';
 
@@ -14,7 +13,7 @@ export default (initialState = {}) => {
   const middlewares = [sagaMiddleware];
   const enhancers = [applyMiddleware(...middlewares)];
 
-  const store = createStore(rootReducer(), fromJS(initialState), composeEnhancers(...enhancers));
+  const store = createStore(rootReducer(), initialState, composeEnhancers(...enhancers));
 
   sagaMiddleware.run(rootSaga);
   store.asyncReducers = {};
