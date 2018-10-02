@@ -8,7 +8,7 @@ import TopicsPage from './containers/topics';
 
 class App extends Component {
   componentWillMount() {
-    this.props.loadIPFSConfig('QmPoixcEi4226dea9NkrcracjxLsYi7e8YkeoGip81WsMf');
+    this.props.loadIPFSConfig('QmTFwtqz4RFBZDFS6cZA6DYJyLWF9RsDmuMcD7DRg44L22');
   }
 
   render() {
