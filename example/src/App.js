@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { navigate, resetErrorMessage, loadIPFSConfig } from '@nopomo/core';
+import { navigate, resetErrorMessage, loadIPFSConfig } from '@a7/vdux';
 import logo from './logo.svg';
 import './App.css';
 

@@ -11,3 +11,4 @@ export const getStore = () => {
 
 export const createStore = _createStore;
 export * from './actions';
+export * from './hocs';

@@ -1,12 +1,4 @@
-export const REQUEST = 'REQUEST';
-export const SUCCESS = 'SUCCESS';
-export const FAILURE = 'FAILURE';
-
-const createRequestTypes = base =>
-  [REQUEST, SUCCESS, FAILURE].reduce((acc, type) => {
-    acc[type] = `${base}_${type}`;
-    return acc;
-  }, {});
+import { action, createRequestTypes, REQUEST, SUCCESS, FAILURE } from './helpers';
 
 // Entities Action Creators
 export const TOPICS = createRequestTypes('TOPICS');
@@ -22,8 +14,6 @@ export const LOAD_IPFS_CONFIG = 'LOAD_IPFS_CONFIG';
 export const LOAD_TOPIC_PAGE = 'LOAD_TOPIC_PAGE';
 export const LOAD_ITEM_PAGE = 'LOAD_ITEM_PAGE';
 export const RESET_ERROR_MESSAGE = 'RESET_ERROR_MESSAGE';
-
-export const action = (type, payload = {}) => ({ type, payload });
 
 export const topics = {
   request: topicUrl => action(TOPICS[REQUEST], { reqId: topicUrl }),

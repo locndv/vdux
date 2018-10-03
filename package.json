@@ -1,6 +1,6 @@
 {
-  "name": "@nopomo/core",
-  "version": "0.0.0-development",
+  "name": "@a7/vdux",
+  "version": "1.0.0",
   "description": "Yet another library.",
   "license": "MIT",
   "main": "lib/index.js",
@@ -22,14 +22,15 @@
     "cross-fetch": "^2.2.2",
     "ramda": "^0.25.0",
     "react": "^16.5.0",
+    "react-redux": "^5.0.7",
     "redux": "^4.0.0",
-    "redux-immutable": "^4.0.0",
     "redux-saga": "^0.16.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.1.2",
     "@commitlint/config-conventional": "^7.1.2",
     "@semantic-release/changelog": "^3.0.0",
+    "@semantic-release/git": "^7.0.4",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-jest": "^23.6.0",
@@ -40,11 +41,11 @@
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jest": "^21.22.1",
+    "eslint-plugin-jest": "^21.24.1",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.11.1",
-    "husky": "^1.0.0-rc.15",
+    "husky": "^1.1.0",
     "jest": "^23.6.0",
     "lint-staged": "^7.3.0",
     "prettier": "^1.14.3",
@@ -94,7 +95,6 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
-    "access": "public",
     "tag": "latest"
   }
 }

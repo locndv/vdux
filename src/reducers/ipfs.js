@@ -1,7 +1,8 @@
-import { IPFS_CONFIG, SUCCESS } from '../actions';
+import { SUCCESS } from '../actions/helpers';
+import { IPFS_CONFIG } from '../actions';
 
 export const initialState = {
-  api: 'QmPhxT9nZALsqWsn14AgkBichHQHXU73SAQx5FP8F6RfT9',
+  api: 'QmaA74A4vTac23VKbRqBoV9f53LvUEFZqha5CVWydRwoKp',
   gateways: ['https://ipfs.vgm.io', 'https://ipfs.io', 'https://storage3.bit.tube']
 };
 
