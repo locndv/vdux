@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
-import { connect } from 'react-redux';
-import { loadTopicPage } from '@nopomo/core';
+import { withTopic } from '@nopomo/core';
 
 class TopicsPage extends Component {
   componentWillMount() {
@@ -15,25 +14,12 @@ class TopicsPage extends Component {
   }
 
   render() {
-    return <div>Hello</div>;
+    return (
+      <div>
+        <pre>{JSON.stringify(this.props.topic, null, 2)}</pre>
+      </div>
+    );
   }
 }
 
-const mapStateToProps = state => {
-  const {
-    entities: { topics },
-    ipfs
-  } = state;
-
-  return {
-    topics,
-    ipfs
-  };
-};
-
-const mapDispatchToProps = { loadTopicPage };
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(TopicsPage);
+export default withTopic()(TopicsPage);
