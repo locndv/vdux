@@ -12,7 +12,8 @@ const ENTITIES = [
   { name: 'SINGLE_TOPIC', data: AllTypes.SINGLE_TOPIC },
   { name: 'SINGLE_ITEM', data: AllTypes.SINGLE_ITEM },
   { name: 'IPFS_CONFIG', data: AllTypes.IPFS_CONFIG, actions: AllTypes.ipfs },
-  { name: 'PLAYER', data: AllTypes.PLAYER, actions: AllTypes.player }
+  { name: 'PLAYER', data: AllTypes.PLAYER, actions: AllTypes.player },
+  { name: 'PLAYER_PLAYLIST', data: AllTypes.PLAYER_PLAYLIST, actions: AllTypes.playerPlaylist }
 ];
 
 describe('actions', () => {
