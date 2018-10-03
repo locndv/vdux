@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@nopomo/core@^1.0.1":
+"@a7/vdux@^1.0.1":
   version "1.0.1"
   resolved "https://npm.vgm.tv/@nopomo%2fcore/-/core-1.0.1.tgz#f4f27577e2118aa84d7793fb3ebec628054a76af"
   dependencies:

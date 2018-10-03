@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { withTopic } from '@nopomo/core';
+import { withTopic } from '@a7/vdux';
 
 class TopicsPage extends Component {
   componentWillMount() {
