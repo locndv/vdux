@@ -1,4 +1,5 @@
-import { IPFS_CONFIG, SUCCESS, REQUEST, ipfs } from '../actions';
+import { SUCCESS, REQUEST } from '../actions/helpers';
+import { IPFS_CONFIG, ipfs } from '../actions';
 import ipfsReducer, { initialState } from './ipfs';
 
 const ipns = 'QmPHK9NYBPMbpNgkey6QVjBe6E2bFX1BN1SzgfqcexKrcX';

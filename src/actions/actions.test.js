@@ -1,7 +1,8 @@
 import * as R from 'ramda';
+import { SUCCESS, FAILURE, REQUEST } from './helpers';
 import * as ActionTypes from '.';
 
-const TYPES = [ActionTypes.SUCCESS, ActionTypes.FAILURE, ActionTypes.REQUEST];
+const TYPES = [SUCCESS, FAILURE, REQUEST];
 const ENTITIES = [
   { name: 'TOPICS', data: ActionTypes.TOPICS, actions: ActionTypes.topics },
   { name: 'ITEMS', data: ActionTypes.ITEMS, actions: ActionTypes.items },
@@ -11,13 +12,6 @@ const ENTITIES = [
 ];
 
 describe('actions', () => {
-  it('create an action', () => {
-    expect(ActionTypes.action('SAMPLE_ACTION', { hello: 'world' })).toEqual({
-      type: 'SAMPLE_ACTION',
-      payload: { hello: 'world' }
-    });
-  });
-
   describe('create entities actions', () => {
     it('create three actions type for each entity', () => {
       R.forEach(entity => {
