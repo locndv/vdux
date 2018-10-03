@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/nopomo/core/compare/v1.1.0...v1.2.0) (2018-10-03)
+
+
+### Features
+
+* **hocs:** add withTopic and withItem hocs ([9ecdcb4](https://github.com/nopomo/core/commit/9ecdcb4))
+
 # [1.1.0](https://github.com/nopomo/core/compare/v1.0.2...v1.1.0) (2018-10-02)
 
 
