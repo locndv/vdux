@@ -1,30 +1,29 @@
 import * as R from 'ramda';
-import * as ActionTypes from '.';
+import { SUCCESS, FAILURE, REQUEST } from './helpers';
+import * as ActionTypes from './actions';
+import * as PlayerTypes from './player';
 
-const TYPES = [ActionTypes.SUCCESS, ActionTypes.FAILURE, ActionTypes.REQUEST];
+const AllTypes = { ...ActionTypes, ...PlayerTypes };
+
+const TYPES = [SUCCESS, FAILURE, REQUEST];
 const ENTITIES = [
-  { name: 'TOPICS', data: ActionTypes.TOPICS, actions: ActionTypes.topics },
-  { name: 'ITEMS', data: ActionTypes.ITEMS, actions: ActionTypes.items },
-  { name: 'SINGLE_TOPIC', data: ActionTypes.SINGLE_TOPIC },
-  { name: 'SINGLE_ITEM', data: ActionTypes.SINGLE_ITEM },
-  { name: 'IPFS_CONFIG', data: ActionTypes.IPFS_CONFIG, actions: ActionTypes.ipfs }
+  { name: 'TOPICS', data: AllTypes.TOPICS, actions: AllTypes.topics },
+  { name: 'ITEMS', data: AllTypes.ITEMS, actions: AllTypes.items },
+  { name: 'SINGLE_TOPIC', data: AllTypes.SINGLE_TOPIC },
+  { name: 'SINGLE_ITEM', data: AllTypes.SINGLE_ITEM },
+  { name: 'IPFS_CONFIG', data: AllTypes.IPFS_CONFIG, actions: AllTypes.ipfs },
+  { name: 'PLAYER', data: AllTypes.PLAYER, actions: AllTypes.player },
+  { name: 'PLAYER_PLAYLIST', data: AllTypes.PLAYER_PLAYLIST, actions: AllTypes.playerPlaylist }
 ];
 
 describe('actions', () => {
-  it('create an action', () => {
-    expect(ActionTypes.action('SAMPLE_ACTION', { hello: 'world' })).toEqual({
-      type: 'SAMPLE_ACTION',
-      payload: { hello: 'world' }
-    });
-  });
-
   describe('create entities actions', () => {
     it('create three actions type for each entity', () => {
       R.forEach(entity => {
-        expect(ActionTypes).toHaveProperty(entity.name);
+        expect(AllTypes).toHaveProperty(entity.name);
         R.forEach(type => {
-          expect(ActionTypes[entity.name]).toHaveProperty(type);
-          expect(ActionTypes[entity.name][type]).toEqual(`${entity.name}_${type}`);
+          expect(AllTypes[entity.name]).toHaveProperty(type);
+          expect(AllTypes[entity.name][type]).toEqual(`${entity.name}_${type}`);
         }, TYPES);
       }, ENTITIES);
     });

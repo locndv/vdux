@@ -2,6 +2,7 @@ import { combineReducers } from 'redux';
 import * as ActionTypes from '../actions';
 import ipfsReducer from './ipfs';
 import entitiesReducer from './entities';
+import playerReducer from './player';
 
 const errorMessage = (state = null, action) => {
   const { type } = action;
@@ -23,6 +24,7 @@ const router = (state = { pathname: '/' }, action) => {
 const rootReducer = combineReducers({
   entities: entitiesReducer,
   ipfs: ipfsReducer,
+  player: playerReducer,
   errorMessage,
   router
 });

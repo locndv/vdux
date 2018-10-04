@@ -1,4 +1,5 @@
-import { IPFS_CONFIG, SUCCESS } from '../actions';
+import { SUCCESS } from '../actions/helpers';
+import { IPFS_CONFIG } from '../actions';
 
 export const initialState = {
   api: 'QmaA74A4vTac23VKbRqBoV9f53LvUEFZqha5CVWydRwoKp',

@@ -5,6 +5,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import TopicsPage from './containers/topics';
+import PlayerPage from './containers/player';
 
 class App extends Component {
   componentWillMount() {
@@ -19,6 +20,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to VGM Core</h1>
         </header>
+        <PlayerPage />
         <TopicsPage />
         <pre>{JSON.stringify(ipfs, null, 2)}</pre>
       </div>
