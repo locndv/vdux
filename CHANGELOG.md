@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/team-a7/vdux/compare/v1.1.0...v1.2.0) (2018-10-04)
+
+
+### Features
+
+* **hocs:** add withPlayer for redux to connect Player component ([14d783b](https://github.com/team-a7/vdux/commit/14d783b))
+
 # [1.1.0](https://github.com/team-a7/vdux/compare/v1.0.1...v1.1.0) (2018-10-04)
 
 
