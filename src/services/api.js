@@ -18,3 +18,7 @@ const callApi = endpoint => {
 export const fetchIPFSConfig = ipns => callApi(`/ipns/${ipns}`);
 export const fetchTopics = (hash, topicUrl) => callApi(`/ipfs/${hash}/${topicUrl}.json`);
 export const fetchItems = (hash, itemUrl) => callApi(`/ipfs/${hash}/${itemUrl}.json`);
+export const fetchSingleItem = (hash, itemUrl) =>
+  callApi(`/ipfs/${hash}/items/single/${itemUrl}.json`);
+export const fetchPlaylist = (hash, topicUrl) =>
+  callApi(`/ipfs/${hash}/items/list/${topicUrl}.json`);
