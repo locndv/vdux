@@ -1,3 +1,16 @@
+# [1.1.0](https://github.com/team-a7/vdux/compare/v1.0.1...v1.1.0) (2018-10-04)
+
+
+### Features
+
+* **actions:** add player load item/playlist function ([a9d9c1f](https://github.com/team-a7/vdux/commit/a9d9c1f))
+* **actions:** add player playlist action ([c79ad7a](https://github.com/team-a7/vdux/commit/c79ad7a))
+* **actions:** define Player actions ([14255cf](https://github.com/team-a7/vdux/commit/14255cf))
+* **reducers:** add  player playlist reducer ([bf575a7](https://github.com/team-a7/vdux/commit/bf575a7))
+* **reducers:** add Player reducer ([528fe3b](https://github.com/team-a7/vdux/commit/528fe3b))
+* **sagas:** add player sagas functions ([a42e1b2](https://github.com/team-a7/vdux/commit/a42e1b2))
+* **services:** add api for player ([c7b1b5c](https://github.com/team-a7/vdux/commit/c7b1b5c))
+
 ## [1.0.1](https://github.com/team-a7/vdux/compare/v1.0.0...v1.0.1) (2018-10-04)
 
 
