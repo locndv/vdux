@@ -1,4 +1,3 @@
-import * as R from 'ramda';
 import * as PlayerActions from './player';
 
 describe('Player Actions', () => {
