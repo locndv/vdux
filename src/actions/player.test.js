@@ -22,4 +22,15 @@ describe('Player Actions', () => {
       payload: {}
     });
   });
+
+  it('create playerLoadPlaylist action', () => {
+    const payload = {
+      hash: 'meo',
+      topicUrl: 'gau'
+    };
+    expect(PlayerActions.playerLoadPlaylist(payload.hash, payload.topicUrl)).toEqual({
+      type: PlayerActions.PLAYER_LOAD_PLAYLIST,
+      payload
+    });
+  });
 });

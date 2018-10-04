@@ -33,7 +33,7 @@ describe('reducers/player', () => {
     const reqUrl = `https://ipfs.io/ipfs/QmaA74A4vTac23VKbRqBoV9f53LvUEFZqha5CVWydRwoKp/items/list/${itemUrl}.json`;
     const response = await fetch(reqUrl);
     const data = await response.json();
-    const listLength = data.list.length;
+    const listLength = data.list.length; /* ? */
     const action = PlayerActions.playerPlaylist.success(itemUrl, data);
     const newState = playerReducer(undefined, action);
     expect(newState.topic).toHaveProperty('url', itemUrl);

@@ -1,6 +1,6 @@
 import * as R from 'ramda';
 import { SUCCESS, FAILURE, REQUEST } from './helpers';
-import * as ActionTypes from '.';
+import * as ActionTypes from './actions';
 import * as PlayerTypes from './player';
 
 const AllTypes = { ...ActionTypes, ...PlayerTypes };
