@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/team-a7/vdux/compare/v1.0.0...v1.0.1) (2018-10-04)
+
+
+### Bug Fixes
+
+* **package:** update react-scripts to version 2.0.4 ([ddbac5f](https://github.com/team-a7/vdux/commit/ddbac5f))
+
 # 1.0.0 (2018-10-03)
 
 
